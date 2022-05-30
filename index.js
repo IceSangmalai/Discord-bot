@@ -14,14 +14,15 @@ client.on("ready", () => {
         `Master`,
         `You`,
         `Deez Nuts`,
-        `Sex`,
+        `Minecraft Survival`,
         `Stanger Things`,
         `Booba`,
         `Anime`
     ]
+    
     setInterval(() => {
         client.user.setActivity(`${botStatus[Math.floor(Math.random()* botStatus.length)]}`, {type: "WATCHING"})
-    }, 10000);
+    }, 36000);
     
 
 })
