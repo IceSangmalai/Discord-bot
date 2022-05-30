@@ -9,14 +9,21 @@ client.once('ready', () => {
 });
 
 client.on("ready", () => {
-    client.user.setPresence({
-        activities: [{ 
-          name: "with my master!",
-          type: "STREAMING",  // LISTENING, WATCHING, COMPETING, STREAMING
-		  url: "https://www.twitch.tv/icesywisy"
-        }],
-        status: "online" // online, idle, dnd, offline
-    })
+
+    let botStatus = [
+        `Master`,
+        `You`,
+        `Deez Nuts`,
+        `Sex`,
+        `Stanger Things`,
+        `Booba`,
+        `Anime`
+    ]
+    setInterval(() => {
+        client.user.setActivity(`${botStatus[Math.floor(Math.random()* botStatus.length)]}`, {type: "WATCHING"})
+    }, 10000);
+    
+
 })
 
 client.login(token);
